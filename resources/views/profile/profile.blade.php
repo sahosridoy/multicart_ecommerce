@@ -2,7 +2,7 @@
 
 @section('content')
 
-   <!-- Container-fluid starts-->
+<!-- Container-fluid starts-->
 <div class="container-fluid">
     <div class="page-header">
         <div class="row">
@@ -32,14 +32,18 @@
             <div class="card">
                 <div class="card-body">
                     <div class="profile-details text-center">
-                        <img src="{{ asset('asset/dasbord/images/dashboard/designer.jpg') }}" alt="" class="img-fluid img-90 rounded-circle blur-up lazyloaded">
+                        <img src="{{ asset('asset/dasbord/images/dashboard/designer.jpg') }}" alt=""
+                            class="img-fluid img-90 rounded-circle blur-up lazyloaded">
                         <h5 class="f-w-600 mb-0">{{ Auth::user()->name }}</h5>
                         <span>{{ Auth::user()->email }}</span>
                         <div class="social">
                             <div class="form-group btn-showcase">
-                                <button class="btn social-btn btn-fb d-inline-block"> <i class="fa fa-facebook"></i></button>
-                                <button class="btn social-btn btn-twitter d-inline-block"><i class="fa fa-google"></i></button>
-                                <button class="btn social-btn btn-google d-inline-block me-0"><i class="fa fa-twitter"></i></button>
+                                <button class="btn social-btn btn-fb d-inline-block"> <i
+                                        class="fa fa-facebook"></i></button>
+                                <button class="btn social-btn btn-twitter d-inline-block"><i
+                                        class="fa fa-google"></i></button>
+                                <button class="btn social-btn btn-google d-inline-block me-0"><i
+                                        class="fa fa-twitter"></i></button>
                             </div>
                         </div>
                     </div>
@@ -50,7 +54,8 @@
                             <div class="media-body">
                                 <h6>Performance<span class="pull-right">80%</span></h6>
                                 <div class="progress sm-progress-bar">
-                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 90%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +63,8 @@
                             <div class="media-body">
                                 <h6>Overtime <span class="pull-right">60%</span></h6>
                                 <div class="progress sm-progress-bar">
-                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 60%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +72,8 @@
                             <div class="media-body">
                                 <h6>Leaves taken<span class="pull-right">70%</span></h6>
                                 <div class="progress sm-progress-bar">
-                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 70%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 70%"
+                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
                             </div>
                         </div>
@@ -78,45 +85,59 @@
             <div class="card tab2-card">
                 <div class="card-body">
                     <ul class="nav nav-tabs nav-material" id="top-tab" role="tablist">
-                        <li class="nav-item"><a class="nav-link " id="top-profile-tab" data-bs-toggle="tab" href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false"><i data-feather="user" class="me-2"></i>Profile</a>
+                        <li class="nav-item"><a class="nav-link " id="top-profile-tab" data-bs-toggle="tab"
+                                href="#top-profile" role="tab" aria-controls="top-profile" aria-selected="false"><i
+                                    data-feather="user" class="me-2"></i>Profile</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link @error('profile_image') active @enderror" id="edit-top-tab" data-bs-toggle="tab" href="#top-edit" role="tab" aria-controls="top-edit" aria-selected="@error('profile_image') true @enderror"><i data-feather="edit" class="me-2"></i>Edit</a>
+                        <li class="nav-item"><a class="nav-link @error('profile_image') active @enderror"
+                                id="edit-top-tab" data-bs-toggle="tab" href="#top-edit" role="tab"
+                                aria-controls="top-edit" aria-selected="@error('profile_image') true @enderror"><i
+                                    data-feather="edit" class="me-2"></i>Edit</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-bs-toggle="tab" href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false"><i data-feather="settings" class="me-2"></i>Contact</a>
+                        <li class="nav-item"><a class="nav-link" id="contact-top-tab" data-bs-toggle="tab"
+                                href="#top-contact" role="tab" aria-controls="top-contact" aria-selected="false"><i
+                                    data-feather="settings" class="me-2"></i>Contact</a>
                         </li>
                     </ul>
                     <div class="tab-content" id="top-tabContent">
-                        <div class="tab-pane fade show active" id="top-profile" role="tabpanel" aria-labelledby="top-profile-tab">
+                        <div class="tab-pane fade show active" id="top-profile" role="tabpanel"
+                            aria-labelledby="top-profile-tab">
                             <h5 class="f-w-600">Profile</h5>
                             <div class="table-responsive profile-table">
                                 <table class="table table-borderless">
                                     <tbody>
-                                    <tr>
-                                        <td>Name:</td>
-                                        <td>{{ Auth::user()->name }}</td>
-
-                                    </tr>
-
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td>{{ Auth::user()->email }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Gender:</td>
-                                        <td>Male</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mobile Number:</td>
-                                        <td>2124821463</td>
-                                    </tr>
-                                    <tr>
-                                        <td>DOB:</td>
-                                        <td>Dec, 15 1993</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Location:</td>
-                                        <td>USA</td>
-                                    </tr>
+                                        <tr>
+                                            <td>Name:</td>
+                                            <td>{{ Auth::user()->name }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email:</td>
+                                            <td>{{ Auth::user()->email }}</td>
+                                        </tr>
+                                        @if (Auth::user()->gender != 0)
+                                        <tr>
+                                            <td>Gender:</td>
+                                            <td>{{ (Auth::user()->gender == 1) ? "Male":"Female" }}</td>
+                                        </tr>
+                                        @endif
+                                        @if (Auth::user()->mobile != null)
+                                        <tr>
+                                            <td>Mobile Number:</td>
+                                            <td>{{ Auth::user()->mobile }}</td>
+                                        </tr>
+                                        @endif
+                                        @if (Auth::user()->dob != null)
+                                        <tr>
+                                            <td>DOB:</td>
+                                            <td>{{ Auth::user()->dob }}</td>
+                                        </tr>
+                                        @endif
+                                        @if (Auth::user()->location != 0)
+                                        <tr>
+                                            <td>Location:</td>
+                                            <td>{{ Auth::user()->location }}</td>
+                                        </tr>
+                                        @endif
                                     </tbody>
                                 </table>
                             </div>
@@ -128,15 +149,17 @@
                                 <div class="row">
                                     <div class="card col-md-6 ">
                                         <div class="card-body">
-                                            <img class="img-100 rounded-circle lazyloaded edit_profile_image" src="{{ asset('asset/upload/user/user.jpg') }}" alt="#">
-                                            <form action="{{ route('profile_image_update') }}" method="POST" enctype="multipart/form-data">
+                                            <img class="img-100 rounded-circle lazyloaded edit_profile_image"
+                                                src="{{ asset('asset/upload/user/user.jpg') }}" alt="#">
+                                            <form action="{{ route('profile_image_update') }}" method="POST"
+                                                enctype="multipart/form-data">
                                                 @csrf
                                                 <input type="hidden" name="id" value="{{ Auth::id() }}">
                                                 <div class="form-group">
                                                     <label>Text</label>
                                                     <input class="form-control-file" type="file" name="profile_image">
                                                     @error('profile_image')
-                                                        <span class="text-danger">{{ $message }}</span>
+                                                    <span class="text-danger">{{ $message }}</span>
                                                     @enderror
                                                 </div>
 
@@ -151,9 +174,11 @@
                                 <div class="row">
                                     <div class="card col-md-6 ">
                                         <div class="card-body">
-                                            <img class="img-100 rounded-circle lazyloaded edit_profile_image" src="{{ asset('asset/upload/user/user.jpg') }}" alt="#">
-                                            {{-- <form action="{{ route('profile_image_update') }}" method="POST" enctype="multipart/form-data"> --}}
-                                            <form  method="POST" enctype="multipart/form-data">
+                                            <img class="img-100 rounded-circle lazyloaded edit_profile_image"
+                                                src="{{ asset('asset/upload/user/user.jpg') }}" alt="#">
+                                            {{-- <form action="{{ route('profile_image_update') }}" method="POST"
+                                            enctype="multipart/form-data"> --}}
+                                            <form method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="form-group">
                                                     <label>Text</label>
@@ -174,9 +199,11 @@
                                 <div class="row">
                                     <div class="card col-md-6 ">
                                         <div class="card-body">
-                                            <img class="img-100 rounded-circle lazyloaded edit_profile_image" src="{{ asset('asset/upload/user/user.jpg') }}" alt="#">
-                                            {{-- <form action="{{ route('profile_image_update') }}" method="POST" enctype="multipart/form-data"> --}}
-                                            <form  method="POST" enctype="multipart/form-data">
+                                            <img class="img-100 rounded-circle lazyloaded edit_profile_image"
+                                                src="{{ asset('asset/upload/user/user.jpg') }}" alt="#">
+                                            {{-- <form action="{{ route('profile_image_update') }}" method="POST"
+                                            enctype="multipart/form-data"> --}}
+                                            <form method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="form-group">
                                                     <label>Text</label>
@@ -198,7 +225,8 @@
                                 <div class="row">
                                     <div class="col">
                                         <label class="d-block" for="edo-ani3">
-                                            <input class="radio_animated" id="edo-ani3" type="radio" name="rdo-ani1" checked="">
+                                            <input class="radio_animated" id="edo-ani3" type="radio" name="rdo-ani1"
+                                                checked="">
                                             No longer usable
                                         </label>
                                         <label class="d-block" for="edo-ani4">
@@ -206,7 +234,8 @@
                                             Want to switch on other account
                                         </label>
                                         <label class="d-block mb-0" for="edo-ani5">
-                                            <input class="radio_animated" id="edo-ani5" type="radio" name="rdo-ani1" checked="">
+                                            <input class="radio_animated" id="edo-ani5" type="radio" name="rdo-ani1"
+                                                checked="">
                                             Other
                                         </label>
                                     </div>
@@ -243,7 +272,8 @@
                                 <div class="row">
                                     <div class="col">
                                         <label class="d-block" for="edo-ani">
-                                            <input class="radio_animated" id="edo-ani" type="radio" name="rdo-ani" checked="">
+                                            <input class="radio_animated" id="edo-ani" type="radio" name="rdo-ani"
+                                                checked="">
                                             I have a privacy concern
                                         </label>
                                         <label class="d-block" for="edo-ani1">
@@ -251,7 +281,8 @@
                                             This is temporary
                                         </label>
                                         <label class="d-block mb-0" for="edo-ani2">
-                                            <input class="radio_animated" id="edo-ani2" type="radio" name="rdo-ani" checked="">
+                                            <input class="radio_animated" id="edo-ani2" type="radio" name="rdo-ani"
+                                                checked="">
                                             Other
                                         </label>
                                     </div>
@@ -263,7 +294,8 @@
                                 <div class="row">
                                     <div class="col">
                                         <label class="d-block" for="edo-ani3">
-                                            <input class="radio_animated" id="edo-ani3" type="radio" name="rdo-ani1" checked="">
+                                            <input class="radio_animated" id="edo-ani3" type="radio" name="rdo-ani1"
+                                                checked="">
                                             No longer usable
                                         </label>
                                         <label class="d-block" for="edo-ani4">
@@ -271,7 +303,8 @@
                                             Want to switch on other account
                                         </label>
                                         <label class="d-block mb-0" for="edo-ani5">
-                                            <input class="radio_animated" id="edo-ani5" type="radio" name="rdo-ani1" checked="">
+                                            <input class="radio_animated" id="edo-ani5" type="radio" name="rdo-ani1"
+                                                checked="">
                                             Other
                                         </label>
                                     </div>
